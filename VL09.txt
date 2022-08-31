@@ -1,0 +1,28 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace VL01
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var s = Console.ReadLine();
+            var s1 = s.Split(' ');
+            double x = Convert.ToDouble(s1[0]);
+            int n = Convert.ToInt32(s1[1]);
+            double sum = 0;
+            double s2 = 1;
+            for (int i = 1; i <= n; i++)
+            {
+                s2 = s2 * x / i;
+                sum = sum + s2;
+            }
+            Console.WriteLine(sum.ToString("0.00"));
+            Console.ReadLine();
+        }
+    }
+}
